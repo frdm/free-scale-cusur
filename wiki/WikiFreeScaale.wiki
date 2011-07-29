@@ -1,0 +1,14 @@
+#summary One-sentence summary of this page.
+
+=El objetivo de esta equeña wiki es publicar nuestras dudas y respuestas que puedan surgir durante el desarrollo del prollecto de freeScale Cup
+ =
+
+
+
+= Details =
+
+Add your content here.  Format your content with:
+            *Ablemos un poco de los microcontroladores de freeScale*
+  * Text in *bold* or _italic_
+  * Headings, paragraphs, and lists
+  * Automatic links to other wiki pages
