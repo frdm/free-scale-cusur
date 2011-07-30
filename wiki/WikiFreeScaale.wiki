@@ -8,7 +8,10 @@
 
 *Ablemos un poco de los microcontroladores de freeScale*
 
+_italic_Pues para no reinventar la rueda les dejo este linck es un libro de un colombiano que abla sobre la arquitectura y la programacion de un microcontrolador de 32 bit`s maraca freeScale _italic_
 
-  * Text in *bold* or _italic_
+http://bairesrobotics.com.ar/data/Microcontroladores_de_32_bits_Freescale_51JM128.pdf
+ 
+ * Text in *bold* or _italic_
   * Headings, paragraphs, and lists
   * Automatic links to other wiki pages
