@@ -1,0 +1,16 @@
+;Codewright Project Space File (do not remove or modify this line)
+[State]
+StateWindowFrame=1561,43,1036,713,0x430d7fca
+_StateHistory=PROJECTS,'.\Scheduler_SmartCarRace.pjt'
+_RestoreProject='.\Scheduler_SmartCarRace.pjt'
+ProjSpaceFlags=0x00000000, 1
+ProjViewSetShow=ABCCc
+
+[Project]
+ConfigSetUserWorkspace=''
+ConfigSetUserWorkspaceParser=''
+ConfigSetUserWorkspaceTimeStamp=0
+ConfigSetUserWorkspaceAutoSync=0
+
+[Project.".\Scheduler_SmartCarRace.pjt"]
+
