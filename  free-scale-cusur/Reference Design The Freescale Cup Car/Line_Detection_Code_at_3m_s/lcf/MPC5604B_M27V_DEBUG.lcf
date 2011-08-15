@@ -1,0 +1,88 @@
+/* lcf file for MPC5604B M27V processors                                     */
+/*                                                                          */
+
+
+/*              512KB Flash, 32KB SRAM                                     */
+
+
+
+
+MEMORY
+{
+    resetvector:           org = 0x00000000,   len = 0x00000008
+    init:		           org = 0x00000020,   len = 0x00000FE0
+    interrupts_flash:      org = 0x00010000,   len = 0x00010000	
+    internal_flash:        org = 0x00002000,   len = 0x0007E000
+
+    internal_ram:          org = 0x40000000,   len = 0x00006000
+    heap  :                org = 0x40006000,   len = 0x00001000 
+    stack :                org = 0x40007000,   len = 0x00001000 
+
+}
+
+
+/* This will ensure the rchw and reset vector are not stripped by the linker */
+FORCEACTIVE { "bam_rchw" "bam_resetvector" }
+
+SECTIONS
+{
+  .boot LOAD (0x00000000) : {} > boot_flash  /* LOAD (0x0) prevents relocation by ROM copy during startup */
+
+   GROUP : {                /* Note: _e_ prefix enables load after END of that specified section */
+      .ivor_branch_table (VLECODE) LOAD (ADDR(interrupts_flash)) : {}
+      .intc_hw_branch_table (VLECODE) LOAD (_e_ivor_branch_table) ALIGN (0x800) : {}
+      .ivor_handlers (VLECODE) LOAD (_e_intc_hw_branch_table) : {} /* Each MPC555x handler require 16B alignmt */
+   } > interrupts_flash
+  
+   
+   GROUP : {
+    	.intc_sw_isr_vector_table ALIGN (2048) : {} /* For INTC in SW Vector Mode */
+
+       .text_vle (VLECODE) ALIGN(0x1000): {
+             *(.text)
+             *(.text_vle)
+             *(.fini)
+             *(.eini)
+         }
+       .init  : {}
+       .init_vle (VLECODE) : {
+             *(.init)
+             *(.init_vle)
+          }
+        .ctors : {}
+        .dtors : {}
+        .rodata (CONST) : {
+            *(.rdata)
+            *(.rodata)
+         }
+	    .sdata2       : {}
+	    extab      : {}
+	    extabindex : {}
+	 }	 > internal_flash
+
+
+	GROUP : {
+	    .data  (DATA) : {} 
+	    .sdata (DATA) : {}
+	    .sbss  (BSS)  : {}
+	    .bss   (BSS)  : {}
+      .PPC.EMB.sdata0 : {}
+      .PPC.EMB.sbss0  : {}
+	} > internal_ram
+}   
+
+/* Freescale CodeWarrior compiler address designations */
+
+_stack_addr = ADDR(stack)+SIZEOF(stack);
+_stack_end  = ADDR(stack);
+_heap_addr  = ADDR(heap);
+_heap_end   = ADDR(heap)+SIZEOF(heap);
+
+
+/* Exceptions Handlers Location (used in Exceptions.c IVPR initialization)*/
+
+__IVPR_VALUE = ADDR(interrupts_flash);
+
+/* L2 SRAM Location (used for L2 SRAM initialization) */
+
+L2SRAM_LOCATION = 0x40000000;
