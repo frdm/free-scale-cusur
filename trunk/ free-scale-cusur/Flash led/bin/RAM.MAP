@@ -472,12 +472,12 @@ Memory map:
                .sdata2 40006004 00000000 00001618          0
                 .sbss2 40006004 00000000 00001614          0
                   .bss 40006008 0000000c 00001618          0
-      .PPC.EMB.apuinfo 00004380 00000000 000059a0          0
+      .PPC.EMB.apuinfo 00003e90 00000000 000054b0          0
          .debug_abbrev          00000155 00001618
-           .debug_info          0000118f 0000176d
-           .debug_line          0000187c 000028fc
-            .debug_loc          000004ad 00004178
-       .debug_pubnames          00000378 00004625
+           .debug_info          00001182 0000176d
+           .debug_line          0000185f 000028ef
+            .debug_loc          00000451 0000414e
+       .debug_pubnames          00000378 0000459f
 
 
 Linker generated symbols:
@@ -529,6 +529,7 @@ _e___uninitialized_intc_handlertable 40006000
             _f_sdata2_rom 40006008
                 _e_sdata2 40006004
                  _f_sbss2 40006004
+             _f_sbss2_rom 40006004
                  _e_sbss2 40006004
                    _f_bss 40006008
                    _e_bss 40006014
