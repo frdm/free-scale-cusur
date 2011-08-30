@@ -48,6 +48,10 @@ SWT.CR.R = 0x8000010A; /* Clear watchdog enable (WEN) */
 void initCONFIG_output(void) { /* set the inputs and outputs */
 
 SIU.PCR[64].R = 0x100; /* set PE[0] as input */
+SIU.PCR[65].R = 0x100;
+SIU.PCR[64].R = 0x100;
+SIU.PCR[66].R = 0x100;
+SIU.PCR[67].R = 0x100;
 
 SIU.PCR[68].R = 0x200; /* set PE[4] as output */
 SIU.PCR[69].R = 0x200; /* set PE[5] as output */
@@ -71,21 +75,43 @@ uint32_t i = 0; /* Dummy idle counter */
 void initFLASHING_led(void) { 
 
 int check = 1;
- 
-{SIU.GPDO[68].R = 0;SIU.GPDO[69].R = 0;SIU.GPDO[70].R = 0;SIU.GPDO[71].R = 0;}
-fgh:
-if(SIU.GPDI[64].R == 0){check=0;goto hola;}
-goto fgh;
 
-hola:
+fgh: 
+{SIU.GPDO[68].R = 0;SIU.GPDO[69].R = 0;SIU.GPDO[70].R = 0;SIU.GPDO[71].R = 0;}
+
+if(SIU.GPDI[64].R == 0){
+		check=0;goto a_el_otro;
+		}
+		else
+			{
+				goto fgh;				
+			}
+
+if(SIU.GPDI[65].R == 0){
+		check=0;goto a_un_lado;
+		}
+		else
+			{
+				goto fgh;				
+			}
+
+a_un_lado:
 
 init_delay();{SIU.GPDO[68].R = 1;SIU.GPDO[69].R = 1;SIU.GPDO[70].R = 1;SIU.GPDO[71].R = 1;}
 init_delay();{SIU.GPDO[68].R = 0;SIU.GPDO[69].R = 1;SIU.GPDO[70].R = 1;SIU.GPDO[71].R = 1;}
 init_delay();{SIU.GPDO[68].R = 1;SIU.GPDO[69].R = 0;SIU.GPDO[70].R = 1;SIU.GPDO[71].R = 1;}
 init_delay();{SIU.GPDO[68].R = 1;SIU.GPDO[69].R = 1;SIU.GPDO[70].R = 0;SIU.GPDO[71].R = 1;}
 init_delay();{SIU.GPDO[68].R = 1;SIU.GPDO[69].R = 1;SIU.GPDO[70].R = 1;SIU.GPDO[71].R = 0;}
+goto fgh;
 
-goto hola;
+a_el_otro:
+init_delay();{SIU.GPDO[68].R = 1;SIU.GPDO[69].R = 1;SIU.GPDO[70].R = 1;SIU.GPDO[71].R = 1;}
+init_delay();{SIU.GPDO[68].R = 1;SIU.GPDO[69].R = 1;SIU.GPDO[70].R = 1;SIU.GPDO[71].R = 0;}
+init_delay();{SIU.GPDO[68].R = 1;SIU.GPDO[69].R = 1;SIU.GPDO[70].R = 0;SIU.GPDO[71].R = 1;}
+init_delay();{SIU.GPDO[68].R = 1;SIU.GPDO[69].R = 0;SIU.GPDO[70].R = 1;SIU.GPDO[71].R = 1;}
+init_delay();{SIU.GPDO[68].R = 0;SIU.GPDO[69].R = 1;SIU.GPDO[70].R = 1;SIU.GPDO[71].R = 1;}
+
+goto fgh;
 
 }
 
