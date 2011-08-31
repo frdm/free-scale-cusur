@@ -77,12 +77,17 @@ void main (void)
 	System_Init();
 	Hardware_Init();
 	SM_KNOB(READ_REQUEST);	//Send the request to get the KNOB value
+	
+	
+	
 	while(TRUE)
 	{
 		
 		while (!(ADCConvertionComplete())) {};
 			SM_WHEEL(UPDATE_WHEEL_POSITION);
 	}
+	
+	
 }
 
 
