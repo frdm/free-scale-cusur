@@ -35,7 +35,8 @@ void init (void)
 	SIU.PCR[64].R=0x100;
 	SIU.PCR[65].R=0x100;
 	SIU.PCR[66].R=0x100;
-	SIU.PCR[67].R=0x100;	
+	SIU.PCR[67].R=0x100;
+	
 }
 
 	
@@ -53,26 +54,28 @@ void WHEEL_Init(void)
 }
 void WHEEL_SetWheelPos(void)
 {
+init();
 /*	SetDutyCycle(KNOB_GetKnobValue());*/
 	if(SIU.GPDI[64].R==0)
 	{
+		
 		valor=100;
-		SetDutyCycle(valor);
+		
 	}
 	if(SIU.GPDI[65].R==0)
 	{
 		valor=350;
-		SetDutyCycle(valor);
+		
 	}
 	if(SIU.GPDI[66].R==0)
 	{
 		valor=600;
-		SetDutyCycle(valor);
-	}
+		}
 	if(SIU.GPDI[67].R==0)
 	{
 		valor=1000;
-		SetDutyCycle(valor);
+		
 	}
+	SetDutyCycle(valor);
 	
 }
