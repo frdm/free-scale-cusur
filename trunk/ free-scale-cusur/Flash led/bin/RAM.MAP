@@ -37,10 +37,10 @@ Link map of __start
   1] ivor_branch_table_p1 (func,global) found in ivor_branch_table.o 
   1] @38 (object,local) found in main.o 
    2] @37 (object,local) found in main.o 
-  1] @54 (object,local) found in main.o 
-   2] @53 (object,local) found in main.o 
-  1] @60 (object,local) found in main.o 
-   2] @59 (object,local) found in main.o 
+  1] @59 (object,local) found in main.o 
+   2] @58 (object,local) found in main.o 
+  1] @65 (object,local) found in main.o 
+   2] @64 (object,local) found in main.o 
   1] @6 (object,local) found in Exceptions.o 
    2] @5 (object,local) found in Exceptions.o 
   1] @13 (object,local) found in IntcInterrupts.o 
@@ -60,7 +60,7 @@ Link map of __start
   1] _dtors (notype,global) found in Linker Generated Symbol File 
   1] _dtors$99 (object,global) found in Linker Generated Symbol File 
     3] .text (section,local) found in main.o 
-    3] .text.65 (notype,local) found in main.o 
+    3] .text.70 (notype,local) found in main.o 
     3] .ivor_branch_table (section,local) found in ivor_branch_table.o 
     3] .ivor_branch_table.24 (notype,local) found in ivor_branch_table.o 
     3] .init (section,local) found in Runtime.PPCEABI.VS.UC.a __start.o
@@ -134,23 +134,23 @@ Link map of __start
   Starting        Virtual  File
   address  Size   address  offset
   ---------------------------------
-  00000000 000280 40000000 000011b0  1 .text 	main.o 
+  00000000 0005e0 40000000 000011b0  1 .text 	main.o 
   00000000 000088 40000000 000011b0  2 initModesAndClock 	main.o 
   00000088 00000c 40000088 00001238  2 initPeriClkGen 	main.o 
   00000094 000032 40000094 00001244  2 disableWatchdog 	main.o 
   000000c6 00005c 400000c6 00001276  2 initCONFIG_output 	main.o 
   00000122 000020 40000122 000012d2  2 init_delay 	main.o 
-  00000142 00011a 40000142 000012f2  2 initFLASHING_led 	main.o 
-  0000025c 000024 4000025c 0000140c  2 main 	main.o 
-  00000280 000000 40000280 00001430  1 .text.65 	main.o 
-  00000280 000066 40000280 00001430  1 .text 	__ppc_eabi_init.o 
-  00000280 00003e 40000280 00001430  2 FlashConfig 	__ppc_eabi_init.o 
-  000002be 000012 400002be 0000146e  2 __init_user 	__ppc_eabi_init.o 
-  000002d0 000014 400002d0 00001480  2 exit 	__ppc_eabi_init.o 
-  000002e4 000002 400002e4 00001494  2 _ExitProcess 	__ppc_eabi_init.o 
-  000002e6 00003a 400002e6 00001496  1 .text 	Runtime.PPCEABI.VS.UC.a ExceptionPPC.o
-  000002e6 00001e 400002e6 00001496  2 __register_fragment 	Runtime.PPCEABI.VS.UC.a ExceptionPPC.o
-  00000304 00001c 40000304 000014b4  2 __unregister_fragment 	Runtime.PPCEABI.VS.UC.a ExceptionPPC.o
+  00000142 00047a 40000142 000012f2  2 initFLASHING_led 	main.o 
+  000005bc 000024 400005bc 0000176c  2 main 	main.o 
+  000005e0 000000 400005e0 00001790  1 .text.70 	main.o 
+  000005e0 000066 400005e0 00001790  1 .text 	__ppc_eabi_init.o 
+  000005e0 00003e 400005e0 00001790  2 FlashConfig 	__ppc_eabi_init.o 
+  0000061e 000012 4000061e 000017ce  2 __init_user 	__ppc_eabi_init.o 
+  00000630 000014 40000630 000017e0  2 exit 	__ppc_eabi_init.o 
+  00000644 000002 40000644 000017f4  2 _ExitProcess 	__ppc_eabi_init.o 
+  00000646 00003a 40000646 000017f6  1 .text 	Runtime.PPCEABI.VS.UC.a ExceptionPPC.o
+  00000646 00001e 40000646 000017f6  2 __register_fragment 	Runtime.PPCEABI.VS.UC.a ExceptionPPC.o
+  00000664 00001c 40000664 00001814  2 __unregister_fragment 	Runtime.PPCEABI.VS.UC.a ExceptionPPC.o
   UNUSED   00005a ........ ........    ExPPC_FindExceptionFragment__FPcP12FragmentInfo Runtime.PPCEABI.VS.UC.a ExceptionPPC.o
   UNUSED   0000e2 ........ ........    ExPPC_FindExceptionRecord__FPcP15MWExceptionInfo Runtime.PPCEABI.VS.UC.a ExceptionPPC.o
   UNUSED   000006 ........ ........    ExPPC_PopR31__FPcP15MWExceptionInfo Runtime.PPCEABI.VS.UC.a ExceptionPPC.o
@@ -193,9 +193,9 @@ Link map of __start
   UNUSED   000086 ........ ........    __uncaught_exception_helper__FP12ThrowContext Runtime.PPCEABI.VS.UC.a ExceptionPPC.o
   UNUSED   000028 ........ ........    __uncaught_exception Runtime.PPCEABI.VS.UC.a ExceptionPPC.o
   UNUSED   00000a ........ ........    what__Q23std13bad_exceptionCFv Runtime.PPCEABI.VS.UC.a ExceptionPPC.o
-  00000320 000000 40000320 000014d0  1 .text.1659 	Runtime.PPCEABI.VS.UC.a ExceptionPPC.o
-  00000320 000064 40000320 000014d0  1 .text 	Runtime.PPCEABI.VS.UC.a runtime.o
-  00000320 00004a 40000320 000014d0  2 __save_gpr 	Runtime.PPCEABI.VS.UC.a runtime.o
+  00000680 000000 40000680 00001830  1 .text.1659 	Runtime.PPCEABI.VS.UC.a ExceptionPPC.o
+  00000680 000064 40000680 00001830  1 .text 	Runtime.PPCEABI.VS.UC.a runtime.o
+  00000680 00004a 40000680 00001830  2 __save_gpr 	Runtime.PPCEABI.VS.UC.a runtime.o
   UNUSED   000000 ........ ........    _savegpr_14 Runtime.PPCEABI.VS.UC.a runtime.o
   UNUSED   000000 ........ ........    _save32gpr_14 Runtime.PPCEABI.VS.UC.a runtime.o
   UNUSED   000000 ........ ........    _savegpr_15 Runtime.PPCEABI.VS.UC.a runtime.o
@@ -228,7 +228,7 @@ Link map of __start
   UNUSED   000000 ........ ........    _save32gpr_28 Runtime.PPCEABI.VS.UC.a runtime.o
   UNUSED   000000 ........ ........    _savegpr_29 Runtime.PPCEABI.VS.UC.a runtime.o
   UNUSED   000000 ........ ........    _save32gpr_29 Runtime.PPCEABI.VS.UC.a runtime.o
-  00000360 000000 40000360 00001510    _savegpr_30 (entry of __save_gpr) 	Runtime.PPCEABI.VS.UC.a runtime.o
+  000006c0 000000 400006c0 00001870    _savegpr_30 (entry of __save_gpr) 	Runtime.PPCEABI.VS.UC.a runtime.o
   UNUSED   000000 ........ ........    _save32gpr_30 Runtime.PPCEABI.VS.UC.a runtime.o
   UNUSED   000000 ........ ........    _savegpr_31 Runtime.PPCEABI.VS.UC.a runtime.o
   UNUSED   000000 ........ ........    _save32gpr_31 Runtime.PPCEABI.VS.UC.a runtime.o
@@ -269,11 +269,11 @@ Link map of __start
   UNUSED   000000 ........ ........    _rest32gpr_30 Runtime.PPCEABI.VS.UC.a runtime.o
   UNUSED   000000 ........ ........    _restgpr_31 Runtime.PPCEABI.VS.UC.a runtime.o
   UNUSED   000000 ........ ........    _rest32gpr_31 Runtime.PPCEABI.VS.UC.a runtime.o
-  0000036a 000008 4000036a 0000151a  2 __restore_frame_and_exit 	Runtime.PPCEABI.VS.UC.a runtime.o
-  0000036c 000000 4000036c 0000151c    __finish_restore_frame_and_exit2 (entry of __restore_frame_and_exit) 	Runtime.PPCEABI.VS.UC.a runtime.o
-  00000372 00000a 40000372 00001522  2 __restore_gpr_31_exit 	Runtime.PPCEABI.VS.UC.a runtime.o
-  00000378 000000 40000378 00001528    __finish_restore_frame_and_exit (entry of __restore_gpr_31_exit) 	Runtime.PPCEABI.VS.UC.a runtime.o
-  0000037c 000008 4000037c 0000152c  2 __restore_gpr_30_exit 	Runtime.PPCEABI.VS.UC.a runtime.o
+  000006ca 000008 400006ca 0000187a  2 __restore_frame_and_exit 	Runtime.PPCEABI.VS.UC.a runtime.o
+  000006cc 000000 400006cc 0000187c    __finish_restore_frame_and_exit2 (entry of __restore_frame_and_exit) 	Runtime.PPCEABI.VS.UC.a runtime.o
+  000006d2 00000a 400006d2 00001882  2 __restore_gpr_31_exit 	Runtime.PPCEABI.VS.UC.a runtime.o
+  000006d8 000000 400006d8 00001888    __finish_restore_frame_and_exit (entry of __restore_gpr_31_exit) 	Runtime.PPCEABI.VS.UC.a runtime.o
+  000006dc 000008 400006dc 0000188c  2 __restore_gpr_30_exit 	Runtime.PPCEABI.VS.UC.a runtime.o
   UNUSED   000008 ........ ........    __restore_gpr_29_exit Runtime.PPCEABI.VS.UC.a runtime.o
   UNUSED   000008 ........ ........    __restore_gpr_28_exit Runtime.PPCEABI.VS.UC.a runtime.o
   UNUSED   000008 ........ ........    __restore_gpr_27_exit Runtime.PPCEABI.VS.UC.a runtime.o
@@ -317,56 +317,56 @@ Link map of __start
   UNUSED   00001a ........ ........    __shl2i Runtime.PPCEABI.VS.UC.a runtime.o
   UNUSED   00001a ........ ........    __shr2u Runtime.PPCEABI.VS.UC.a runtime.o
   UNUSED   00001c ........ ........    __shr2i Runtime.PPCEABI.VS.UC.a runtime.o
-  00000384 000000 40000384 00001534  1 .text.205 	Runtime.PPCEABI.VS.UC.a runtime.o
-  00000384 000050 40000384 00001534  1 .text 	Runtime.PPCEABI.VS.UC.a __init_cpp_exceptions.o
-  00000384 00002e 40000384 00001534  2 __init_cpp_exceptions 	Runtime.PPCEABI.VS.UC.a __init_cpp_exceptions.o
-  000003b2 000022 400003b2 00001562  2 __fini_cpp_exceptions 	Runtime.PPCEABI.VS.UC.a __init_cpp_exceptions.o
+  000006e4 000000 400006e4 00001894  1 .text.205 	Runtime.PPCEABI.VS.UC.a runtime.o
+  000006e4 000050 400006e4 00001894  1 .text 	Runtime.PPCEABI.VS.UC.a __init_cpp_exceptions.o
+  000006e4 00002e 400006e4 00001894  2 __init_cpp_exceptions 	Runtime.PPCEABI.VS.UC.a __init_cpp_exceptions.o
+  00000712 000022 40000712 000018c2  2 __fini_cpp_exceptions 	Runtime.PPCEABI.VS.UC.a __init_cpp_exceptions.o
 
 
 .rodata section layout
   Starting        Virtual  File
   address  Size   address  offset
   ---------------------------------
-  00000000 00000c 400003d8 00001588  1 .rodata 	__ppc_eabi_init.o 
-  00000000 00000c 400003d8 00001588  4 @22 	__ppc_eabi_init.o 
+  00000000 00000c 40000738 000018e8  1 .rodata 	__ppc_eabi_init.o 
+  00000000 00000c 40000738 000018e8  4 @22 	__ppc_eabi_init.o 
 
 
 .ctors section layout
   Starting        Virtual  File
   address  Size   address  offset
   ---------------------------------
-  00000000 000000 400003e4 00001594  1 .ctors$00 	Linker Generated Symbol File 
-  00000000 000000 400003e4 00001594  4 _ctors 	Linker Generated Symbol File 
-  00000000 000004 400003e4 00001594  1 .ctors$10 	Runtime.PPCEABI.VS.UC.a __init_cpp_exceptions.o
-  00000000 000004 400003e4 00001594  4 __init_cpp_exceptions_reference 	Runtime.PPCEABI.VS.UC.a __init_cpp_exceptions.o
-  00000004 000004 400003e8 00001598  1 .ctors$99 	Linker Generated Symbol File 
-  00000004 000004 400003e8 00001598  4 _ctors$99 	Linker Generated Symbol File 
+  00000000 000000 40000744 000018f4  1 .ctors$00 	Linker Generated Symbol File 
+  00000000 000000 40000744 000018f4  4 _ctors 	Linker Generated Symbol File 
+  00000000 000004 40000744 000018f4  1 .ctors$10 	Runtime.PPCEABI.VS.UC.a __init_cpp_exceptions.o
+  00000000 000004 40000744 000018f4  4 __init_cpp_exceptions_reference 	Runtime.PPCEABI.VS.UC.a __init_cpp_exceptions.o
+  00000004 000004 40000748 000018f8  1 .ctors$99 	Linker Generated Symbol File 
+  00000004 000004 40000748 000018f8  4 _ctors$99 	Linker Generated Symbol File 
 
 
 .dtors section layout
   Starting        Virtual  File
   address  Size   address  offset
   ---------------------------------
-  00000000 000000 400003ec 0000159c  1 .dtors$00 	Linker Generated Symbol File 
-  00000000 000000 400003ec 0000159c  4 _dtors 	Linker Generated Symbol File 
-  00000000 000004 400003ec 0000159c  1 .dtors$15 	Runtime.PPCEABI.VS.UC.a __init_cpp_exceptions.o
-  00000000 000004 400003ec 0000159c  4 __fini_cpp_exceptions_reference 	Runtime.PPCEABI.VS.UC.a __init_cpp_exceptions.o
-  00000004 000004 400003f0 000015a0  1 .dtors$99 	Linker Generated Symbol File 
-  00000004 000004 400003f0 000015a0  4 _dtors$99 	Linker Generated Symbol File 
+  00000000 000000 4000074c 000018fc  1 .dtors$00 	Linker Generated Symbol File 
+  00000000 000000 4000074c 000018fc  4 _dtors 	Linker Generated Symbol File 
+  00000000 000004 4000074c 000018fc  1 .dtors$15 	Runtime.PPCEABI.VS.UC.a __init_cpp_exceptions.o
+  00000000 000004 4000074c 000018fc  4 __fini_cpp_exceptions_reference 	Runtime.PPCEABI.VS.UC.a __init_cpp_exceptions.o
+  00000004 000004 40000750 00001900  1 .dtors$99 	Linker Generated Symbol File 
+  00000004 000004 40000750 00001900  4 _dtors$99 	Linker Generated Symbol File 
 
 
 extab section layout
   Starting        Virtual  File
   address  Size   address  offset
   ---------------------------------
-  00000000 000018 400003f4 000015a4  1 extab 	main.o 
-  00000000 000008 400003f4 000015a4  4 @37 	main.o 
-  00000008 000008 400003fc 000015ac  4 @53 	main.o 
-  00000010 000008 40000404 000015b4  4 @59 	main.o 
-  00000018 000008 4000040c 000015bc  1 extab 	Exceptions.o 
-  00000018 000008 4000040c 000015bc  4 @5 	Exceptions.o 
-  00000020 000008 40000414 000015c4  1 extab 	IntcInterrupts.o 
-  00000020 000008 40000414 000015c4  4 @12 	IntcInterrupts.o 
+  00000000 000018 40000754 00001904  1 extab 	main.o 
+  00000000 000008 40000754 00001904  4 @37 	main.o 
+  00000008 000008 4000075c 0000190c  4 @58 	main.o 
+  00000010 000008 40000764 00001914  4 @64 	main.o 
+  00000018 000008 4000076c 0000191c  1 extab 	Exceptions.o 
+  00000018 000008 4000076c 0000191c  4 @5 	Exceptions.o 
+  00000020 000008 40000774 00001924  1 extab 	IntcInterrupts.o 
+  00000020 000008 40000774 00001924  4 @12 	IntcInterrupts.o 
 
 
 extabindex section layout
@@ -391,8 +391,8 @@ extabindex section layout
   Starting        Virtual  File
   address  Size   address  offset
   ---------------------------------
-  00000000 000004 40006000 00001638  1 .sdata 	Runtime.PPCEABI.VS.UC.a __init_cpp_exceptions.o
-  00000000 000004 40006000 00001638  4 fragmentID 	Runtime.PPCEABI.VS.UC.a __init_cpp_exceptions.o
+  00000000 000004 40006000 00001998  1 .sdata 	Runtime.PPCEABI.VS.UC.a __init_cpp_exceptions.o
+  00000000 000004 40006000 00001998  4 fragmentID 	Runtime.PPCEABI.VS.UC.a __init_cpp_exceptions.o
 
 
 .sbss section layout
@@ -417,20 +417,20 @@ extabindex section layout
   Starting        Virtual  File
   address  Size   address  offset
   ---------------------------------
-  00000000 00000c 40006008 00001640  1 .bss 	Runtime.PPCEABI.VS.UC.a ExceptionPPC.o
-  00000000 00000c 40006008 00001640  4 fragmentinfo 	Runtime.PPCEABI.VS.UC.a ExceptionPPC.o
+  00000000 00000c 40006008 000019a0  1 .bss 	Runtime.PPCEABI.VS.UC.a ExceptionPPC.o
+  00000000 00000c 40006008 000019a0  4 fragmentinfo 	Runtime.PPCEABI.VS.UC.a ExceptionPPC.o
 
 
 extabindex section layout
   Starting        Virtual  File
   address  Size   address  offset
   ---------------------------------
-  00000000 00000c 4000041c 00001638  4 @38 	main.o 
-  0000000c 00000c 40000428 00001638  4 @54 	main.o 
-  00000018 00000c 40000434 00001638  4 @60 	main.o 
-  00000024 00000c 40000440 00001638  4 @6 	Exceptions.o 
-  00000030 00000c 4000044c 00001638  4 @13 	IntcInterrupts.o 
-  0000003c 000030 40000458 00001638  4 _eti_init_info 	Linker Generated Symbol File 
+  00000000 00000c 4000077c 00001998  4 @38 	main.o 
+  0000000c 00000c 40000788 00001998  4 @59 	main.o 
+  00000018 00000c 40000794 00001998  4 @65 	main.o 
+  00000024 00000c 400007a0 00001998  4 @6 	Exceptions.o 
+  00000030 00000c 400007ac 00001998  4 @13 	IntcInterrupts.o 
+  0000003c 000030 400007b8 00001998  4 _eti_init_info 	Linker Generated Symbol File 
   UNUSED   00000c ........ ........    @224 Runtime.PPCEABI.VS.UC.a ExceptionPPC.o
   UNUSED   00000c ........ ........    @308 Runtime.PPCEABI.VS.UC.a ExceptionPPC.o
   UNUSED   00000c ........ ........    @409 Runtime.PPCEABI.VS.UC.a ExceptionPPC.o
@@ -454,30 +454,30 @@ extabindex section layout
 Memory map:
                        Starting Size     File       S-Record
                        address           Offset     Line
-                 .init 40004000 000000a0 000001c0         62
-             .init_vle 400040a0 000001f4 00000260         70
-    .ivor_branch_table 40005000 00000100 00001000         95
-  .__exception_handlers 40005100 000000a8 00001100        108
+                 .init 40004000 000000a0 000001c0        106
+             .init_vle 400040a0 000001f4 00000260        114
+    .ivor_branch_table 40005000 00000100 00001000        139
+  .__exception_handlers 40005100 000000a8 00001100        152
                  .text 40000000 00000000 000011b0          0
-             .text_vle 40000000 000003d4 000011b0          2
-               .rodata 400003d8 0000000c 00001588         51
-                .ctors 400003e4 00000008 00001594         52
-                .dtors 400003ec 00000008 0000159c         53
-                 extab 400003f4 00000028 000015a4         54
-            extabindex 4000041c 0000006c 000015cc         56
-  .__uninitialized_intc_handlertable 40006000 00000000 00001640          0
-                 .data 40006000 00000000 00001638          0
-                .sdata 40006000 00000004 00001638        117
-                 .sbss 40006004 00000000 00001640          0
-               .sdata2 40006004 00000000 00001640          0
-                .sbss2 40006004 00000000 0000163c          0
-                  .bss 40006008 0000000c 00001640          0
-      .PPC.EMB.apuinfo 00004484 00000000 00005ad0          0
-         .debug_abbrev          00000155 00001640
-           .debug_info          00001237 00001795
-           .debug_line          000018d7 000029cc
-            .debug_loc          000004ad 000042a3
-       .debug_pubnames          00000378 00004750
+             .text_vle 40000000 00000734 000011b0          2
+               .rodata 40000738 0000000c 000018e8         95
+                .ctors 40000744 00000008 000018f4         96
+                .dtors 4000074c 00000008 000018fc         97
+                 extab 40000754 00000028 00001904         98
+            extabindex 4000077c 0000006c 0000192c        100
+  .__uninitialized_intc_handlertable 40006000 00000000 000019a0          0
+                 .data 40006000 00000000 00001998          0
+                .sdata 40006000 00000004 00001998        161
+                 .sbss 40006004 00000000 000019a0          0
+               .sdata2 40006004 00000000 000019a0          0
+                .sbss2 40006004 00000000 0000199c          0
+                  .bss 40006008 0000000c 000019a0          0
+      .PPC.EMB.apuinfo 0000462c 00000000 00005fd0          0
+         .debug_abbrev          00000155 000019a0
+           .debug_info          00001237 00001af5
+           .debug_line          0000199b 00002d2c
+            .debug_loc          000004ad 000046c7
+       .debug_pubnames          00000378 00004b74
 
 
 Linker generated symbols:
@@ -499,22 +499,22 @@ _f___exception_handlers_rom 40005100
                   _e_text 40000000
               _f_text_vle 40000000
           _f_text_vle_rom 40000000
-              _e_text_vle 400003d4
-                _f_rodata 400003d8
-            _f_rodata_rom 400003d8
-                _e_rodata 400003e4
-                 _f_ctors 400003e4
-             _f_ctors_rom 400003e4
-                 _e_ctors 400003ec
-                 _f_dtors 400003ec
-             _f_dtors_rom 400003ec
-                 _e_dtors 400003f4
-                  _fextab 400003f4
-              _fextab_rom 400003f4
-                  _eextab 4000041c
-             _fextabindex 4000041c
-         _fextabindex_rom 4000041c
-             _eextabindex 40000488
+              _e_text_vle 40000734
+                _f_rodata 40000738
+            _f_rodata_rom 40000738
+                _e_rodata 40000744
+                 _f_ctors 40000744
+             _f_ctors_rom 40000744
+                 _e_ctors 4000074c
+                 _f_dtors 4000074c
+             _f_dtors_rom 4000074c
+                 _e_dtors 40000754
+                  _fextab 40000754
+              _fextab_rom 40000754
+                  _eextab 4000077c
+             _fextabindex 4000077c
+         _fextabindex_rom 4000077c
+             _eextabindex 400007e8
 _f___uninitialized_intc_handlertable 40006000
 _e___uninitialized_intc_handlertable 40006000
                   _f_data 40006000

@@ -1,9 +1,11 @@
 /* Programa: flasheo de leds, con pushbutton de inicio */
 /* Explicacion: cuando se presione el pushbutton conectado
 a PE[0], se inicia el flasheo de los leds conectados a PE[4],PE[5],PE[6] y PE[7].
-NOTA: el programa no se reinicia al presionar de nuevo el pushbutton */
+
 /* Fecha de creación: 05-Ago-2011 */
-/* Programador: Cristóbal Christian Ramirez Ruiz */
+/* Fecha de modificacion: 05-Ago-2011 */
+
+/* Programador: BRAINDSTROM CUSUR
 /* Ayuda: initModesAndClock,initPeriClkGen y disableWatchdog, tomados de "MPC5500 & MPC5600
 Simple Cookbook" (Freescale) */
 
@@ -65,7 +67,7 @@ void init_delay(void)
 {
 uint32_t i = 0; /* Dummy idle counter */
  
-    for(i=0;i<1000000;i++)
+    for(i=0;i<5000000;i++)
 	{
 	;	
 	}
@@ -76,24 +78,30 @@ void initFLASHING_led(void) {
 
 int check = 1;
 
-fgh: 
-{SIU.GPDO[68].R = 0;SIU.GPDO[69].R = 0;SIU.GPDO[70].R = 0;SIU.GPDO[71].R = 0;}
+start_led: 
+init_delay();{SIU.GPDO[68].R = 0;SIU.GPDO[69].R = 0;SIU.GPDO[70].R = 0;SIU.GPDO[71].R = 0;}
 
 if(SIU.GPDI[64].R == 0){
 		check=0;goto a_el_otro;
 		}
-		else
-			{
-				goto fgh;				
-			}
+		
 
 if(SIU.GPDI[65].R == 0){
 		check=0;goto a_un_lado;
 		}
+
+if(SIU.GPDI[66].R == 0){
+		check=0;goto hacia_fuera;
+		}
+if(SIU.GPDI[67].R == 0){
+		check=0;goto brinquitos;
+		}
+		
 		else
-			{
-				goto fgh;				
-			}
+		{
+			goto start_led;	
+		}
+	
 
 a_un_lado:
 
@@ -102,7 +110,7 @@ init_delay();{SIU.GPDO[68].R = 0;SIU.GPDO[69].R = 1;SIU.GPDO[70].R = 1;SIU.GPDO[
 init_delay();{SIU.GPDO[68].R = 1;SIU.GPDO[69].R = 0;SIU.GPDO[70].R = 1;SIU.GPDO[71].R = 1;}
 init_delay();{SIU.GPDO[68].R = 1;SIU.GPDO[69].R = 1;SIU.GPDO[70].R = 0;SIU.GPDO[71].R = 1;}
 init_delay();{SIU.GPDO[68].R = 1;SIU.GPDO[69].R = 1;SIU.GPDO[70].R = 1;SIU.GPDO[71].R = 0;}
-goto fgh;
+goto start_led;
 
 a_el_otro:
 init_delay();{SIU.GPDO[68].R = 1;SIU.GPDO[69].R = 1;SIU.GPDO[70].R = 1;SIU.GPDO[71].R = 1;}
@@ -110,8 +118,26 @@ init_delay();{SIU.GPDO[68].R = 1;SIU.GPDO[69].R = 1;SIU.GPDO[70].R = 1;SIU.GPDO[
 init_delay();{SIU.GPDO[68].R = 1;SIU.GPDO[69].R = 1;SIU.GPDO[70].R = 0;SIU.GPDO[71].R = 1;}
 init_delay();{SIU.GPDO[68].R = 1;SIU.GPDO[69].R = 0;SIU.GPDO[70].R = 1;SIU.GPDO[71].R = 1;}
 init_delay();{SIU.GPDO[68].R = 0;SIU.GPDO[69].R = 1;SIU.GPDO[70].R = 1;SIU.GPDO[71].R = 1;}
+goto start_led;
 
-goto fgh;
+hacia_fuera:
+init_delay();{SIU.GPDO[68].R = 0;SIU.GPDO[69].R = 1;SIU.GPDO[70].R = 1;SIU.GPDO[71].R = 0;}
+init_delay();{SIU.GPDO[68].R = 1;SIU.GPDO[69].R = 0;SIU.GPDO[70].R = 0;SIU.GPDO[71].R = 1;}
+init_delay();{SIU.GPDO[68].R = 0;SIU.GPDO[69].R = 1;SIU.GPDO[70].R = 1;SIU.GPDO[71].R = 0;}
+init_delay();{SIU.GPDO[68].R = 1;SIU.GPDO[69].R = 0;SIU.GPDO[70].R = 0;SIU.GPDO[71].R = 1;}
+init_delay();{SIU.GPDO[68].R = 0;SIU.GPDO[69].R = 1;SIU.GPDO[70].R = 1;SIU.GPDO[71].R = 0;}
+goto start_led;
+
+brinquitos:
+init_delay();{SIU.GPDO[68].R = 0;SIU.GPDO[69].R = 0;SIU.GPDO[70].R = 0;SIU.GPDO[71].R = 0;}/*Steep 1*/
+init_delay();{SIU.GPDO[68].R = 1;SIU.GPDO[69].R = 0;SIU.GPDO[70].R = 0;SIU.GPDO[71].R = 0;}
+init_delay();{SIU.GPDO[68].R = 0;SIU.GPDO[69].R = 1;SIU.GPDO[70].R = 0;SIU.GPDO[71].R = 0;}
+init_delay();{SIU.GPDO[68].R = 0;SIU.GPDO[69].R = 0;SIU.GPDO[70].R = 1;SIU.GPDO[71].R = 0;}
+init_delay();{SIU.GPDO[68].R = 0;SIU.GPDO[69].R = 0;SIU.GPDO[70].R = 0;SIU.GPDO[71].R = 1;}
+init_delay();{SIU.GPDO[68].R = 0;SIU.GPDO[69].R = 0;SIU.GPDO[70].R = 1;SIU.GPDO[71].R = 0;}
+init_delay();{SIU.GPDO[68].R = 0;SIU.GPDO[69].R = 1;SIU.GPDO[70].R = 0;SIU.GPDO[71].R = 0;}
+init_delay();{SIU.GPDO[68].R = 1;SIU.GPDO[69].R = 0;SIU.GPDO[70].R = 0;SIU.GPDO[71].R = 0;}
+goto start_led;
 
 }
 
