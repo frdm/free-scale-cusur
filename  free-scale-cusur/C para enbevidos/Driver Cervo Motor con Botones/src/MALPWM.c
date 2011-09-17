@@ -36,8 +36,9 @@ void InitPWM(void)
 	MALbeMIOS_initEMIOS0();
 	
 	MALbeMIOS_initEMIOS0_ch23();
-
+	MALbeMIOS_initEMIOS0_ch16();
 	IO_SetPinFctn(pin_PE7,PA_AM1);
+	IO_SetPinFctn(pin_PD6,PA_AM1);
 }
 
 void SetDutyCycle(T_UWORD luw_DC)
@@ -47,4 +48,9 @@ void SetDutyCycle(T_UWORD luw_DC)
 		luw_DC=1000;
 	}
 	EMIOS_0.CH[23].CADR.R=(luw_DC+1000);
+}
+void SetDutyCycle1(T_UWORD luw_DC)
+{
+
+	EMIOS_0.CH[16].CADR.R=(luw_DC+1000);
 }

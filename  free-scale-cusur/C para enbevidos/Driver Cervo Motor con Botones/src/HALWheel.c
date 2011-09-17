@@ -37,10 +37,16 @@ void init (void)
 	SIU.PCR[66].R=0x100;
 	SIU.PCR[67].R=0x100;
 	
+	SIU.PCR[48].R = 0x200; /* set PA[0] as input */
+	SIU.PCR[50].R = 0x200; /* set PA[2] as input */
+	SIU.PCR[52].R = 0x200; /* set PA[4] as input */
+
+	
 }
 
 	
 T_UWORD valor = 1000;
+T_UWORD valor1 = 1000;
 
 
 
@@ -76,6 +82,11 @@ init();
 		valor=1000;
 		
 	}
+	SIU.GPDO[48].R = 1;
+	SIU.GPDO[50].R = 1;
+	SIU.GPDO[52].R = 0;
+	
 	SetDutyCycle(valor);
 	
+	SetDutyCycle1(valor1);
 }
