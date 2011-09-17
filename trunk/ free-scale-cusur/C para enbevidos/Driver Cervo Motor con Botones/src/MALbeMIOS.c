@@ -129,5 +129,26 @@ void MALbeMIOS_initEMIOS0_ch23(void)
 	/* Select Channel mode */
  	EMIOS_0.CH[23].CCR.B.MODE=0x58;	//Configure as Output Pulse Width and Frequency Modulation Buffered
 }
+void MALbeMIOS_initEMIOS0_ch16(void)
+{
+	/* Ensure that Channel is Enabled */
+	EMIOS_0.UCDIS.B.CHDIS16 = FALSE;
+	
+	/* Configure Channel 16 Paramenters */
+	/* -------------------------------- */ 
+		/* Set Registers A and B for this channel */
+	EMIOS_0.CH[16].CADR.R = 0x2710;//This value indicates the value to make the change (Duty cycle)
+  	EMIOS_0.CH[16].CBDR.R = 0x4E20;//This Register indicates the Value for period
+  								   /* Register B is set at its maximum value in order to 
+  	                               /* control PWM duty cycle just with register A */                             	
+	/* Set eMIOS0 Channel 23 prescaler (clock division is equal to the UCPRE value + 1) */
+	EMIOS_0.CH[16].CCR.B.UCPRE = 0;	/* Clock prescaler of 1 for this channel */
+	/* Enable clock prescaler for this channel */
+	EMIOS_0.CH[16].CCR.B.UCPEN = TRUE;
+	/* Select Internal Counter */
+	EMIOS_0.CH[16].CCR.B.BSL = 0x0; 
+	/* Select Channel mode */
+ 	EMIOS_0.CH[16].CCR.B.MODE=0x58;	//Configure as Output Pulse Width and Frequency Modulation Buffered
+}
 
 
