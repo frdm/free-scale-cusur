@@ -239,7 +239,7 @@ Link map of __start
   UNUSED   000066 ........ ........    vfnInit_Adc_WatchdogH Driver_ADC.o 
   000001b2 00006e 000021b2 000009d2  2 u16Read_Adc 	Driver_ADC.o 
   00000220 000000 00002220 00000a40  1 .text.57 	Driver_ADC.o 
-  00000220 0003ac 00002220 00000a40  1 .text 	Driver_Camara_Lineal.o 
+  00000220 0003aa 00002220 00000a40  1 .text 	Driver_Camara_Lineal.o 
   00000220 00008c 00002220 00000a40  2 vfnSetup_CamLin 	Driver_Camara_Lineal.o 
   UNUSED   000014 ........ ........    vfnInit_CamLin_Ipwm Driver_Camara_Lineal.o 
   UNUSED   0000aa ........ ........    Set_Pulse_Width Driver_Camara_Lineal.o 
@@ -248,23 +248,23 @@ Link map of __start
   UNUSED   000006 ........ ........    u16Delta_X Driver_Camara_Lineal.o 
   000002ac 000054 000022ac 00000acc  2 vfnInit_CamLin_Adc 	Driver_Camara_Lineal.o 
   00000300 000270 00002300 00000b20  2 u8Capture_Pixel_Values 	Driver_Camara_Lineal.o 
-  00000570 00005c 00002570 00000d90  2 control 	Driver_Camara_Lineal.o 
-  000005cc 000000 000025cc 00000dec  1 .text.168 	Driver_Camara_Lineal.o 
-  000005cc 000040 000025cc 00000dec  1 .text 	Driver_CTU.o 
-  000005cc 000040 000025cc 00000dec  2 vfnTrigger_Emios_Adc 	Driver_CTU.o 
-  0000060c 000000 0000260c 00000e2c  1 .text.11 	Driver_CTU.o 
-  0000060c 0002f2 0000260c 00000e2c  1 .text 	Driver_EMIOS.o 
-  0000060c 00002e 0000260c 00000e2c  2 vfnSetup_Emios_0 	Driver_EMIOS.o 
-  0000063a 00004a 0000263a 00000e5a  2 vfnSetup_Emios_1 	Driver_EMIOS.o 
-  00000684 000010 00002684 00000ea4  2 vfnInit_Emios_0 	Driver_EMIOS.o 
-  00000694 000014 00002694 00000eb4  2 vfnInit_Emios_1 	Driver_EMIOS.o 
-  000006a8 00006c 000026a8 00000ec8  2 vfnInit_Emios_0_Mcb 	Driver_EMIOS.o 
-  00000714 000068 00002714 00000f34  2 vfnInit_Emios_0_Opwm 	Driver_EMIOS.o 
+  00000570 00005a 00002570 00000d90  2 control 	Driver_Camara_Lineal.o 
+  000005ca 000000 000025ca 00000dea  1 .text.168 	Driver_Camara_Lineal.o 
+  000005ca 000040 000025ca 00000dea  1 .text 	Driver_CTU.o 
+  000005ca 000040 000025ca 00000dea  2 vfnTrigger_Emios_Adc 	Driver_CTU.o 
+  0000060a 000000 0000260a 00000e2a  1 .text.11 	Driver_CTU.o 
+  0000060a 0002f2 0000260a 00000e2a  1 .text 	Driver_EMIOS.o 
+  0000060a 00002e 0000260a 00000e2a  2 vfnSetup_Emios_0 	Driver_EMIOS.o 
+  00000638 00004a 00002638 00000e58  2 vfnSetup_Emios_1 	Driver_EMIOS.o 
+  00000682 000010 00002682 00000ea2  2 vfnInit_Emios_0 	Driver_EMIOS.o 
+  00000692 000014 00002692 00000eb2  2 vfnInit_Emios_1 	Driver_EMIOS.o 
+  000006a6 00006c 000026a6 00000ec6  2 vfnInit_Emios_0_Mcb 	Driver_EMIOS.o 
+  00000712 000068 00002712 00000f32  2 vfnInit_Emios_0_Opwm 	Driver_EMIOS.o 
   UNUSED   000088 ........ ........    vfnInit_Emios_0_Ipwm Driver_EMIOS.o 
   UNUSED   000088 ........ ........    vfnInit_Emios_0_Ipwm_Ctu Driver_EMIOS.o 
   UNUSED   000062 ........ ........    vfnInit_Emios_0_Saic Driver_EMIOS.o 
-  0000077c 000078 0000277c 00000f9c  2 vfnInit_Emios_0_Saic_Ctu 	Driver_EMIOS.o 
-  000007f4 000014 000027f4 00001014  2 vfnSet_Duty_Opwm 	Driver_EMIOS.o 
+  0000077a 000078 0000277a 00000f9a  2 vfnInit_Emios_0_Saic_Ctu 	Driver_EMIOS.o 
+  000007f2 000014 000027f2 00001012  2 vfnSet_Duty_Opwm 	Driver_EMIOS.o 
   UNUSED   000058 ........ ........    vfnSet_Duty_Perc_Opwm Driver_EMIOS.o 
   UNUSED   00006c ........ ........    u16Read_Saic Driver_EMIOS.o 
   UNUSED   00003c ........ ........    u16Pulse_Counter Driver_EMIOS.o 
@@ -272,26 +272,26 @@ Link map of __start
   UNUSED   000018 ........ ........    Restart_Modulus_Counter Driver_EMIOS.o 
   UNUSED   000020 ........ ........    u16Get_Counter Driver_EMIOS.o 
   UNUSED   000024 ........ ........    u16Get_Period_Mcb Driver_EMIOS.o 
-  00000808 000070 00002808 00001028  2 beMIOS_initEMIOS0_ch23 	Driver_EMIOS.o 
-  00000878 000086 00002878 00001098  2 beMIOS_initEMIOS1_ch23 	Driver_EMIOS.o 
-  000008fe 000000 000028fe 0000111e  1 .text.131 	Driver_EMIOS.o 
-  000008fe 00009c 000028fe 0000111e  1 .text 	Driver_SIU.o 
-  000008fe 00001a 000028fe 0000111e  2 vfnInit_Emios_Output_Pad 	Driver_SIU.o 
-  00000918 00001a 00002918 00001138  2 vfnInit_Emios1_Output_Pad 	Driver_SIU.o 
-  00000932 00001a 00002932 00001152  2 vfnInit_Emios_Input_Pad 	Driver_SIU.o 
-  0000094c 000018 0000294c 0000116c  2 vfnInit_Adc_Pad 	Driver_SIU.o 
-  00000964 000018 00002964 00001184  2 vfnInit_Gpio_Out 	Driver_SIU.o 
-  0000097c 00001e 0000297c 0000119c  2 vfnSet_Gpio 	Driver_SIU.o 
-  0000099a 000000 0000299a 000011ba  1 .text.36 	Driver_SIU.o 
-  0000099a 000104 0000299a 000011ba  1 .text 	Setup.o 
-  0000099a 000032 0000299a 000011ba  2 vfnDisable_Watchdog 	Setup.o 
-  000009cc 00000c 000029cc 000011ec  2 vfnInit_Peri_Clk_Gen 	Setup.o 
-  000009d8 0000b0 000029d8 000011f8  2 vfnInit_Modes_And_Clock 	Setup.o 
-  00000a88 000016 00002a88 000012a8  2 vfnInit_All 	Setup.o 
-  00000a9e 000000 00002a9e 000012be  1 .text.33 	Setup.o 
-  00000a9e 00003a 00002a9e 000012be  1 .text 	Runtime.PPCEABI.VS.UC.a ExceptionPPC.o
-  00000a9e 00001e 00002a9e 000012be  2 __register_fragment 	Runtime.PPCEABI.VS.UC.a ExceptionPPC.o
-  00000abc 00001c 00002abc 000012dc  2 __unregister_fragment 	Runtime.PPCEABI.VS.UC.a ExceptionPPC.o
+  00000806 000070 00002806 00001026  2 beMIOS_initEMIOS0_ch23 	Driver_EMIOS.o 
+  00000876 000086 00002876 00001096  2 beMIOS_initEMIOS1_ch23 	Driver_EMIOS.o 
+  000008fc 000000 000028fc 0000111c  1 .text.131 	Driver_EMIOS.o 
+  000008fc 00009c 000028fc 0000111c  1 .text 	Driver_SIU.o 
+  000008fc 00001a 000028fc 0000111c  2 vfnInit_Emios_Output_Pad 	Driver_SIU.o 
+  00000916 00001a 00002916 00001136  2 vfnInit_Emios1_Output_Pad 	Driver_SIU.o 
+  00000930 00001a 00002930 00001150  2 vfnInit_Emios_Input_Pad 	Driver_SIU.o 
+  0000094a 000018 0000294a 0000116a  2 vfnInit_Adc_Pad 	Driver_SIU.o 
+  00000962 000018 00002962 00001182  2 vfnInit_Gpio_Out 	Driver_SIU.o 
+  0000097a 00001e 0000297a 0000119a  2 vfnSet_Gpio 	Driver_SIU.o 
+  00000998 000000 00002998 000011b8  1 .text.36 	Driver_SIU.o 
+  00000998 000104 00002998 000011b8  1 .text 	Setup.o 
+  00000998 000032 00002998 000011b8  2 vfnDisable_Watchdog 	Setup.o 
+  000009ca 00000c 000029ca 000011ea  2 vfnInit_Peri_Clk_Gen 	Setup.o 
+  000009d6 0000b0 000029d6 000011f6  2 vfnInit_Modes_And_Clock 	Setup.o 
+  00000a86 000016 00002a86 000012a6  2 vfnInit_All 	Setup.o 
+  00000a9c 000000 00002a9c 000012bc  1 .text.33 	Setup.o 
+  00000a9c 00003a 00002a9c 000012bc  1 .text 	Runtime.PPCEABI.VS.UC.a ExceptionPPC.o
+  00000a9c 00001e 00002a9c 000012bc  2 __register_fragment 	Runtime.PPCEABI.VS.UC.a ExceptionPPC.o
+  00000aba 00001c 00002aba 000012da  2 __unregister_fragment 	Runtime.PPCEABI.VS.UC.a ExceptionPPC.o
   UNUSED   00005a ........ ........    ExPPC_FindExceptionFragment__FPcP12FragmentInfo Runtime.PPCEABI.VS.UC.a ExceptionPPC.o
   UNUSED   0000e2 ........ ........    ExPPC_FindExceptionRecord__FPcP15MWExceptionInfo Runtime.PPCEABI.VS.UC.a ExceptionPPC.o
   UNUSED   000006 ........ ........    ExPPC_PopR31__FPcP15MWExceptionInfo Runtime.PPCEABI.VS.UC.a ExceptionPPC.o
@@ -334,9 +334,9 @@ Link map of __start
   UNUSED   000086 ........ ........    __uncaught_exception_helper__FP12ThrowContext Runtime.PPCEABI.VS.UC.a ExceptionPPC.o
   UNUSED   000028 ........ ........    __uncaught_exception Runtime.PPCEABI.VS.UC.a ExceptionPPC.o
   UNUSED   00000a ........ ........    what__Q23std13bad_exceptionCFv Runtime.PPCEABI.VS.UC.a ExceptionPPC.o
-  00000ad8 000000 00002ad8 000012f8  1 .text.1659 	Runtime.PPCEABI.VS.UC.a ExceptionPPC.o
-  00000ad8 000064 00002ad8 000012f8  1 .text 	Runtime.PPCEABI.VS.UC.a runtime.o
-  00000ad8 00004a 00002ad8 000012f8  2 __save_gpr 	Runtime.PPCEABI.VS.UC.a runtime.o
+  00000ad6 000000 00002ad6 000012f6  1 .text.1659 	Runtime.PPCEABI.VS.UC.a ExceptionPPC.o
+  00000ad6 000064 00002ad6 000012f6  1 .text 	Runtime.PPCEABI.VS.UC.a runtime.o
+  00000ad6 00004a 00002ad6 000012f6  2 __save_gpr 	Runtime.PPCEABI.VS.UC.a runtime.o
   UNUSED   000000 ........ ........    _savegpr_14 Runtime.PPCEABI.VS.UC.a runtime.o
   UNUSED   000000 ........ ........    _save32gpr_14 Runtime.PPCEABI.VS.UC.a runtime.o
   UNUSED   000000 ........ ........    _savegpr_15 Runtime.PPCEABI.VS.UC.a runtime.o
@@ -369,7 +369,7 @@ Link map of __start
   UNUSED   000000 ........ ........    _save32gpr_28 Runtime.PPCEABI.VS.UC.a runtime.o
   UNUSED   000000 ........ ........    _savegpr_29 Runtime.PPCEABI.VS.UC.a runtime.o
   UNUSED   000000 ........ ........    _save32gpr_29 Runtime.PPCEABI.VS.UC.a runtime.o
-  00000b18 000000 00002b18 00001338    _savegpr_30 (entry of __save_gpr) 	Runtime.PPCEABI.VS.UC.a runtime.o
+  00000b16 000000 00002b16 00001336    _savegpr_30 (entry of __save_gpr) 	Runtime.PPCEABI.VS.UC.a runtime.o
   UNUSED   000000 ........ ........    _save32gpr_30 Runtime.PPCEABI.VS.UC.a runtime.o
   UNUSED   000000 ........ ........    _savegpr_31 Runtime.PPCEABI.VS.UC.a runtime.o
   UNUSED   000000 ........ ........    _save32gpr_31 Runtime.PPCEABI.VS.UC.a runtime.o
@@ -410,11 +410,11 @@ Link map of __start
   UNUSED   000000 ........ ........    _rest32gpr_30 Runtime.PPCEABI.VS.UC.a runtime.o
   UNUSED   000000 ........ ........    _restgpr_31 Runtime.PPCEABI.VS.UC.a runtime.o
   UNUSED   000000 ........ ........    _rest32gpr_31 Runtime.PPCEABI.VS.UC.a runtime.o
-  00000b22 000008 00002b22 00001342  2 __restore_frame_and_exit 	Runtime.PPCEABI.VS.UC.a runtime.o
-  00000b24 000000 00002b24 00001344    __finish_restore_frame_and_exit2 (entry of __restore_frame_and_exit) 	Runtime.PPCEABI.VS.UC.a runtime.o
-  00000b2a 00000a 00002b2a 0000134a  2 __restore_gpr_31_exit 	Runtime.PPCEABI.VS.UC.a runtime.o
-  00000b30 000000 00002b30 00001350    __finish_restore_frame_and_exit (entry of __restore_gpr_31_exit) 	Runtime.PPCEABI.VS.UC.a runtime.o
-  00000b34 000008 00002b34 00001354  2 __restore_gpr_30_exit 	Runtime.PPCEABI.VS.UC.a runtime.o
+  00000b20 000008 00002b20 00001340  2 __restore_frame_and_exit 	Runtime.PPCEABI.VS.UC.a runtime.o
+  00000b22 000000 00002b22 00001342    __finish_restore_frame_and_exit2 (entry of __restore_frame_and_exit) 	Runtime.PPCEABI.VS.UC.a runtime.o
+  00000b28 00000a 00002b28 00001348  2 __restore_gpr_31_exit 	Runtime.PPCEABI.VS.UC.a runtime.o
+  00000b2e 000000 00002b2e 0000134e    __finish_restore_frame_and_exit (entry of __restore_gpr_31_exit) 	Runtime.PPCEABI.VS.UC.a runtime.o
+  00000b32 000008 00002b32 00001352  2 __restore_gpr_30_exit 	Runtime.PPCEABI.VS.UC.a runtime.o
   UNUSED   000008 ........ ........    __restore_gpr_29_exit Runtime.PPCEABI.VS.UC.a runtime.o
   UNUSED   000008 ........ ........    __restore_gpr_28_exit Runtime.PPCEABI.VS.UC.a runtime.o
   UNUSED   000008 ........ ........    __restore_gpr_27_exit Runtime.PPCEABI.VS.UC.a runtime.o
@@ -458,10 +458,10 @@ Link map of __start
   UNUSED   00001a ........ ........    __shl2i Runtime.PPCEABI.VS.UC.a runtime.o
   UNUSED   00001a ........ ........    __shr2u Runtime.PPCEABI.VS.UC.a runtime.o
   UNUSED   00001c ........ ........    __shr2i Runtime.PPCEABI.VS.UC.a runtime.o
-  00000b3c 000000 00002b3c 0000135c  1 .text.205 	Runtime.PPCEABI.VS.UC.a runtime.o
-  00000b3c 000050 00002b3c 0000135c  1 .text 	Runtime.PPCEABI.VS.UC.a __init_cpp_exceptions.o
-  00000b3c 00002e 00002b3c 0000135c  2 __init_cpp_exceptions 	Runtime.PPCEABI.VS.UC.a __init_cpp_exceptions.o
-  00000b6a 000022 00002b6a 0000138a  2 __fini_cpp_exceptions 	Runtime.PPCEABI.VS.UC.a __init_cpp_exceptions.o
+  00000b3a 000000 00002b3a 0000135a  1 .text.205 	Runtime.PPCEABI.VS.UC.a runtime.o
+  00000b3a 000050 00002b3a 0000135a  1 .text 	Runtime.PPCEABI.VS.UC.a __init_cpp_exceptions.o
+  00000b3a 00002e 00002b3a 0000135a  2 __init_cpp_exceptions 	Runtime.PPCEABI.VS.UC.a __init_cpp_exceptions.o
+  00000b68 000022 00002b68 00001388  2 __fini_cpp_exceptions 	Runtime.PPCEABI.VS.UC.a __init_cpp_exceptions.o
 
 
 .rodata section layout
@@ -652,12 +652,12 @@ Memory map:
                .sdata2 4000136c 00000000 00001810 00003010 00003010          0
                 .sbss2 4000136c 00000000 00001810 00003010 00003010          0
                   .bss 40001370 0000010c 00001810 00003010 00003010          0
-      .PPC.EMB.apuinfo 00007508 00000000 00008d20 0000a518 0000a518          0
-         .debug_abbrev          00000155 00001810
-           .debug_info          00002209 00001965
-           .debug_line          00002cb9 00003b6e
-            .debug_loc          00000854 00006827
-       .debug_pubnames          00000723 0000707b
+      .PPC.EMB.apuinfo 0000885c 00000000 0000a070 0000b86c 0000b86c          0
+         .debug_abbrev          00000143 00001810
+           .debug_info          00002678 00001953
+           .debug_line          00002f16 00003fcb
+            .debug_loc          000009f2 00006ee1
+       .debug_pubnames          00000723 000078d3
 
 
 Linker generated symbols:
@@ -713,7 +713,6 @@ _e___uninitialized_intc_handlertable 40001340
             _f_sdata2_rom 00003010
                 _e_sdata2 4000136c
                  _f_sbss2 4000136c
-             _f_sbss2_rom 00003010
                  _e_sbss2 4000136c
                    _f_bss 40001370
                    _e_bss 4000147c
