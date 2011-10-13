@@ -25,7 +25,7 @@ uint16_t 	u16CamCounter;
 uint8_t 	u8i;
 uint8_t		u8scandone;
 uint8_t		killo=0;
-uint8_t		pipe=500;
+uint8_t		pipe=450;
 
 /*************************************************************/
 
@@ -302,29 +302,30 @@ uint8_t u8Capture_Pixel_Values(void)
 
 void control(void)
 {
-		 if((	u16posicion<=94)&&(	u16posicion>=34))
+		 if((	u16posicion<=94)&&(	u16posicion>=64)) /* 94 34*/
  {
  	
- EMIOS_0.CH[23].CADR.R = 220;
+ EMIOS_0.CH[23].CADR.R = 165;
   
 
  	
  }
  
- else if((u16posicion<34)&&(u16posicion>18))
+ else if((u16posicion<65)&&(u16posicion>8)) /*34 18*/
  {
- EMIOS_0.CH[23].CADR.R = 190;
+ EMIOS_0.CH[23].CADR.R = 110;
    
  	
  	
 } 
  
- else if((u16posicion>94)&&(u16posicion<110))
+ else if((u16posicion>94)&&(u16posicion<124)) /*94 110*/
  {
   
-	EMIOS_0.CH[23].CADR.R = 240;
+	EMIOS_0.CH[23].CADR.R = 220;
  	
  }
  
+
 }
   			
