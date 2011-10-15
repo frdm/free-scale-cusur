@@ -224,7 +224,7 @@ void beMIOS_initEMIOS0_ch0(void)
 	/* Configure Channel 23 Paramenters */
 	/* -------------------------------- */ 
 		/* Set Registers A and B for this channel */
-	EMIOS_0.CH[0].CADR.R = 220;      /* Initial duty cycle is equal to 50% */
+	EMIOS_0.CH[0].CADR.R = 220;      /* Initial duty cycle is equal to 50% else 440 */
   	EMIOS_0.CH[0].CBDR.R = 1000;      /* Register B is set at 0x1F40 */      
 //	EMIOS_0.CH[23].CADR.R = 0x001E;      /* Initial duty cycle is equal to 50% */
 //  EMIOS_0.CH[23].CBDR.R = 0x003C;      /* Register B is set at 0x003C */                           	
